@@ -2,8 +2,6 @@
 
 namespace MPDN\Operation;
 
-use InvalidArgumentException;
-
 class SessionOperation extends UserOperation {
 
     /**

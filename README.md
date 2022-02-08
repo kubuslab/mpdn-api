@@ -122,3 +122,5 @@ Berikut adalah fitur (disebut dengan **Operation**) yang didukung oleh library.
 | MPDN\Operation\Admin\Organization | subdivisions | Menampilkan daftar sub-wilayah berdasarkan induk wilayah tertentu. |
 | MPDN\Operation\Admin\Organization | facilites | Menampilkan daftar FASKES berdasarkan induk wilayah tertentu. |
 | MPDN\Operation\Admin\Organization | users | Menampilkan daftar user terdaftar yang dapat digunakan oleh Aplikasi. User management yang ada di MPDN dapat direlasikan dengan user management yang ada pada internal Aplikasi anda dengan bantuan web service ini. |
+| MPDN\Operation\FormOperation | requestReset | Menghapus(membatalkan) ```token``` form yang dibuat baik token form ibu maupun bayi. |
+| MPDN\Operation\SessionOperation | check | Memeriksa hak akses dan kemampuan yang dimiliki oleh session saat ini. |
