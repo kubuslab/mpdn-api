@@ -96,6 +96,7 @@ MPDN::prepare($globalKey, false)
 ## 3. Menggunakan Operation pada MPDN API
 Berikut adalah fitur (disebut dengan **Operation**) yang didukung oleh library.
 | Class | Function | Operation |
+| ----- | -------- | --------- |
 | MPDN\Operation\Notification\Maternal | list | Menampilkan daftar agregat Angka Kematian Ibu per daerah sesuai dengan spesifikasi berikut. |
 | MPDN\Operation\Notification\Maternal | requestNew | Meminta ```token``` form Notifikasi Kematian Maternal untuk pelaporan kematian baru. |
 | MPDN\Operation\Notification\Maternal | requestEdit | Meminta ```token``` form Notifikasi Kematian Maternal untuk pengeditan data. idkematian kematian Maternal harus disertakan pada url request. |
