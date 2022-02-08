@@ -100,8 +100,8 @@ Berikut adalah fitur (disebut dengan **Operation**) yang didukung oleh library.
 | MPDN\Operation\Notification\Maternal | list | Menampilkan daftar agregat Angka Kematian Ibu per daerah sesuai dengan spesifikasi berikut. |
 | MPDN\Operation\Notification\Maternal | requestNew | Meminta ```token``` form Notifikasi Kematian Maternal untuk pelaporan kematian baru. |
 | MPDN\Operation\Notification\Maternal | requestEdit | Meminta ```token``` form Notifikasi Kematian Maternal untuk pengeditan data. idkematian kematian Maternal harus disertakan pada url request. |
-| MPDN\Operation\Notification\Maternal | create | Menampilkan daftar agregat Angka Kematian Ibu per daerah sesuai dengan spesifikasi berikut. |
-| MPDN\Operation\Notification\Maternal | edit | Menampilkan daftar agregat Angka Kematian Ibu per daerah sesuai dengan spesifikasi berikut. |
+| MPDN\Operation\Notification\Maternal | create | Mengirim data notifikasi kematian Maternal baru. |
+| MPDN\Operation\Notification\Maternal | edit | Mengirim perubahan data notifikasi kematian Maternal. |
 | MPDN\Operation\Notification\Maternal | markAsVerified | **Verifikasi** data kematian Maternal. |
 | MPDN\Operation\Notification\Maternal | markAsFinal | **Finalisasi** data kematian Maternal. |
 | MPDN\Operation\Notification\Maternal | markAsDuplicate | Menandai data kematian Maternal yang belum memiliki Nomor KTP(NIK) Ibu sebagai **TERDUPLIKAT**. |
@@ -111,8 +111,8 @@ Berikut adalah fitur (disebut dengan **Operation**) yang didukung oleh library.
 | MPDN\Operation\Notification\Perinatal | list | Menampilkan daftar agregat Angka Kematian Ibu per daerah sesuai dengan spesifikasi berikut. |
 | MPDN\Operation\Notification\Perinatal | requestNew | Meminta ```token``` form Notifikasi Kematian Perinatal untuk pelaporan kematian baru. |
 | MPDN\Operation\Notification\Perinatal | requestEdit | Meminta ```token``` form Notifikasi Kematian Perinatal untuk pengeditan data. idkematian kematian Perinatal harus disertakan pada url request. |
-| MPDN\Operation\Notification\Perinatal | create | Menampilkan daftar agregat Angka Kematian Ibu per daerah sesuai dengan spesifikasi berikut. |
-| MPDN\Operation\Notification\Perinatal | edit | Menampilkan daftar agregat Angka Kematian Ibu per daerah sesuai dengan spesifikasi berikut. |
+| MPDN\Operation\Notification\Perinatal | create | Mengirim data notifikasi kematian Perinatal baru. |
+| MPDN\Operation\Notification\Perinatal | edit | Mengirim perubahan data notifikasi kematian Perinatal. |
 | MPDN\Operation\Notification\Perinatal | markAsVerified | **Verifikasi** data kematian Perinatal. |
 | MPDN\Operation\Notification\Perinatal | markAsFinal | **Finalisasi** data kematian Perinatal. |
 | MPDN\Operation\Notification\Perinatal | markAsDuplicate | Menandai data kematian Perinatal yang belum memiliki Nomor KTP(NIK) Ibu sebagai **TERDUPLIKAT**. |
