@@ -118,7 +118,6 @@ Berikut adalah fitur (disebut dengan **Operation**) yang didukung oleh library.
 | MPDN\Operation\Notification\Perinatal | markAsDuplicate | Menandai data kematian Perinatal yang belum memiliki Nomor KTP(NIK) Ibu sebagai **TERDUPLIKAT**. |
 | MPDN\Operation\Notification\Perinatal | markAsAnnulled | Menganulir kematian maternal hanya dapat dilakukan oleh pelapor yang pertama melaporkan data (owner). |
 | MPDN\Operation\Notification\Perinatal | requestForRejection | Mengirim pengajuan penolakan atas sengkata Alamat Domisili. |
-
 | MPDN\Operation\Notification\Perinatal | acceptForRejection | Mengirim persetujuan penolakan atas sengkata Alamat Domisili. |
 | MPDN\Operation\Admin\Organization | subdivisions | Menampilkan daftar sub-wilayah berdasarkan induk wilayah tertentu. |
 | MPDN\Operation\Admin\Organization | facilites | Menampilkan daftar FASKES berdasarkan induk wilayah tertentu. |
