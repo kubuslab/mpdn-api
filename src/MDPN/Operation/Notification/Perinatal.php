@@ -1,6 +1,6 @@
 <?php
 
-namespace MPDN\Notification;
+namespace MPDN\Operation\Notification;
 
 use InvalidArgumentException;
 use MPDN\Exception\ApiException;

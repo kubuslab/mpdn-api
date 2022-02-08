@@ -246,14 +246,4 @@ class MPDN {
 
     	return $this;
     }
-
-    /**
-     * @param  Operation $operation MPDN operation object
-     * 
-     * @return array
-     */
-    public function execute($operation)
-    {
-    	
-    }
 }

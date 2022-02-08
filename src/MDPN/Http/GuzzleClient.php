@@ -23,10 +23,11 @@ class GuzzleClient implements ClientInterface
     public function __construct($baseUrl, $config = [])
     {
         $config = $config + [
-            'base_uri' => $baseUrl,
             'verify' => false,
             'timeout' => 45
         ];
+        $config['base_uri'] = $baseUrl;
+
         $this->http = new Guzzle($config);
     }
 
