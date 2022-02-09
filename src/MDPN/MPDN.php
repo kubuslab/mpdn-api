@@ -30,16 +30,34 @@ class MPDN {
 	 */
 	const HEADER_USER_KEY = 'X-USER-KEY';
 
-	//region MPDN Constants
+	//region Constants for MPDN Data
+	//region Type of Maternal or Perinatal Death Notification list
 	const TYPE_ALAMAT_DOMISILI   = 'AD';
 	const TYPE_ALAMAT_KTP        = 'AK';
 	const TYPE_ALAMAT_MATI       = 'AM';
 	const TYPE_ALAMAT_LAHIR      = 'AL';
+	//endregion
 
+	//region Type of filter on Facitilty query list
 	const TYPE_FASKES_SEMUA      = 'SEMUA';
 	const TYPE_FASKES_RS         = 'RS';
 	const TYPE_FASKES_KLINIK     = 'KLINIK';
 	const TYPE_FASKES_PUSKESMAS  = 'PKM';
+	//endregion
+
+	//region Version of individual Maternal or Perinatal data (located on field 'baris' for each row)
+	const DATA_VERSION_ORIGINAL  = 'O';
+	const DATA_VERSION_DUPLICATE = 'D';
+	const DATA_VERSION_ANNULLED  = 'A';
+	const DATA_VERSION_FINAL     = 'F';
+	//endregion
+
+	//region Validation Status of individual Maternal or Perinatal data (located on field 'status' for each row)
+	const DATA_STATUS_INVALID           = 'I';
+	const DATA_STATUS_VALID_WITH_KTP    = 'V';
+	const DATA_STATUS_VALID_WITHOUT_KTP = 'N';
+	const DATA_STATUS_VERIFIED          = 'F';
+	//endregion
 	//endregion
 
 	/**

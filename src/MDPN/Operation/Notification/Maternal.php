@@ -3,6 +3,7 @@
 namespace MPDN\Operation\Notification;
 
 use InvalidArgumentException;
+use MPDN\Data\MaternalNotification;
 use MPDN\Exception\ApiException;
 use MPDN\MPDN;
 use MPDN\Operation\UserOperation;
@@ -88,7 +89,7 @@ class Maternal extends UserOperation {
     /**
      * Create new Maternal Death Notification data
      *
-     * @param array  $data  [required] Maternal Death Notification data
+     * @param array|MaternalNotification  $data  [required] Maternal Death Notification data
      * @param string $token [optional] form token for create new data Maternal Nofitication. If token is null, token otomatic generated
      * 
      * @return array
@@ -111,7 +112,7 @@ class Maternal extends UserOperation {
 
         $this->method = 'POST';
         $this->url    = 'mpdn/ibu/lapor';
-        $this->params = $data;
+        $this->params = $data instanceof MaternalNotification ? $data->getOutgoingArray() : $data;
 
         return $this->execute();
     }
@@ -119,7 +120,7 @@ class Maternal extends UserOperation {
     /**
      * Edit existing Maternal Death Notification data
      *
-     * @param array  $data  [required] Maternal Death Notification data
+     * @param array|MaternalNotification  $data  [required] Maternal Death Notification data
      * @param string $token [optional] form token for create new data Maternal Nofitication. 
      *                      If token is null, token otomatic generated based on suplied $id
      * @param string $id    [optional] Data ID to be edited. Must be supplied if token is null
@@ -143,7 +144,7 @@ class Maternal extends UserOperation {
 
         $this->method = 'POST';
         $this->url    = 'mpdn/ibu/edit';
-        $this->params = $data;
+        $this->params = $data instanceof MaternalNotification ? $data->getOutgoingArray() : $data;
 
         return $this->execute();
     }

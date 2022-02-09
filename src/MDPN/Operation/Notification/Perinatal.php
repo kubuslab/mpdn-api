@@ -3,6 +3,7 @@
 namespace MPDN\Operation\Notification;
 
 use InvalidArgumentException;
+use MPDN\Data\PerinatalNotification;
 use MPDN\Exception\ApiException;
 use MPDN\MPDN;
 use MPDN\Operation\UserOperation;
@@ -93,7 +94,7 @@ class Perinatal extends UserOperation {
     /**
      * Create new Perinatal Death Notification data
      *
-     * @param array  $data  [required] Perinatal Death Notification data
+     * @param array|PerinatalNotification  $data  [required] Perinatal Death Notification data
      * @param string $token [optional] form token for create new data Perinatal Nofitication. If token is null, token otomatic generated
      * 
      * @return array
@@ -116,7 +117,7 @@ class Perinatal extends UserOperation {
 
         $this->method = 'POST';
         $this->url    = 'mpdn/bayi/lapor';
-        $this->params = $data;
+        $this->params = $data instanceof PerinatalNotification ? $data->getOutgoingArray() : $data;
 
         return $this->execute();
     }
@@ -124,7 +125,7 @@ class Perinatal extends UserOperation {
     /**
      * Edit existing Perinatal Death Notification data
      *
-     * @param array  $data  [required] Perinatal Death Notification data
+     * @param array|PerinatalNotification  $data  [required] Perinatal Death Notification data
      * @param string $token [optional] form token for create new data Perinatal Nofitication. 
      *                      If token is null, token otomatic generated based on suplied $id
      * @param string $id    [optional] Data ID to be edited. Must be supplied if token is null
@@ -148,7 +149,7 @@ class Perinatal extends UserOperation {
 
         $this->method = 'POST';
         $this->url    = 'mpdn/bayi/edit';
-        $this->params = $data;
+        $this->params = $data instanceof PerinatalNotification ? $data->getOutgoingArray() : $data;
 
         return $this->execute();
     }
