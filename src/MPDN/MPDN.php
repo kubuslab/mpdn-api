@@ -129,9 +129,9 @@ class MPDN {
 		return self::$instance;
 	}
 
-	protected function __construct($globalKey, $full, $config = [])
+	protected function __construct($globalApiKey, $full, $config = [])
 	{
-		$this->globalKey = $globalKey;
+		$this->globalApiKey = $globalApiKey;
 		$this->full = $full === true;
 		$this->config = $config;
 		$this->baseUrl = $this->full ? self::BASEPATH_FULL : self::BASEPATH_DEMO;

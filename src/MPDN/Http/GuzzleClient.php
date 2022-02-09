@@ -113,7 +113,7 @@ class GuzzleClient implements ClientInterface
             self::handleError($rbody, $rcode, $rheader);
         }
 
-        $rbody = $response->getBody();
+        $rbody = json_decode($response->getBody()->getContents(), true);
         $rcode = (int) $response->getStatusCode();
         $rheader = $response->getHeaders();
 

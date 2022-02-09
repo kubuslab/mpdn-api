@@ -51,7 +51,7 @@ class Organization extends AdminOperation {
             throw new InvalidArgumentException('Request for editing form required data id to be suplied', 801);
         }
 
-        if ($type && in_array($type, [MPDN::TYPE_FASKES_SEMUA, MPDN::TYPE_FASKES_RS, 
+        if ($type && !in_array($type, [MPDN::TYPE_FASKES_SEMUA, MPDN::TYPE_FASKES_RS, 
                             MPDN::TYPE_FASKES_KLINIK, MPDN::TYPE_FASKES_PUSKESMAS]
                         ))
         {

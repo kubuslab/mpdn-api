@@ -12,7 +12,7 @@ class SessionOperation extends UserOperation {
      */
     public function check()
     {
-        $this->url = 'ws/usr/session';
+        $this->url = '/ws/usr/session';
 
         return $this->execute();
     }

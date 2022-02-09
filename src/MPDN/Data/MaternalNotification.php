@@ -2,12 +2,10 @@
 
 namespace MPDN\Data;
 
-use MPDN\Data;
-
 /**
  * Maternal Death Notification data structure
  */
-class MaternalNotification extends Data
+class MaternalNotification extends FormData
 {
 	protected $incomingMap = [
 		'id' => 'id',
@@ -68,6 +66,7 @@ class MaternalNotification extends Data
     ];
 
     protected $outgoingMap = [
+        'token' => 'token',
     	'originid' => 'originid',
         'msgid' => 'msgid',
 		'anonim' => 'anonim',
@@ -119,313 +118,313 @@ class MaternalNotification extends Data
 	*
 	* @var string
 	*/
-	private $msgid;
+	protected $msgid;
 
 	/**
 	*
 	* @var string
 	*/
-	private $anonim;
+	protected $anonim;
 
 	/**
 	*
 	* @var string
 	*/
-	private $ktp;
+	protected $ktp;
 
 	/**
 	*
 	* @var string
 	*/
-	private $warganegara;
+	protected $warganegara;
 
 	/**
 	*
 	* @var string
 	*/
-	private $selain_ktp;
+	protected $selain_ktp;
 
 	/**
 	*
 	* @var string
 	*/
-	private $nomor_selain;
+	protected $nomor_selain;
 
 	/**
 	*
 	* @var string
 	*/
-	private $nama;
+	protected $nama;
 
 	/**
 	*
 	* @var int
 	*/
-	private $menikah;
+	protected $menikah;
 
 	/**
 	*
 	* @var int
 	*/
-	private $umur;
+	protected $umur;
 
 	/**
 	*
 	* @var int
 	*/
-	private $hamil_ke;
+	protected $hamil_ke;
 
 	/**
 	*
 	* @var int
 	*/
-	private $usia_kehamilan;
+	protected $usia_kehamilan;
 
 	/**
 	*
 	* @var string
 	*/
-	private $sebab_kematian;
+	protected $sebab_kematian;
 
 	/**
 	*
 	* @var string
 	*/
-	private $dugaan_lain;
+	protected $dugaan_lain;
 
 	/**
 	*
 	* @var string
 	*/
-	private $kab_kota;
+	protected $kab_kota;
 
 	/**
 	*
 	* @var string
 	*/
-	private $kab_kota_ktp;
+	protected $kab_kota_ktp;
 
 	/**
 	*
 	* @var string
 	*/
-	private $kab_kota_sekarang;
+	protected $kab_kota_sekarang;
 
 	/**
 	*
 	* @var string
 	*/
-	private $domisili;
+	protected $domisili;
 
 	/**
 	*
 	* @var string
 	*/
-	private $alamat_mati;
+	protected $alamat_mati;
 
 	/**
 	*
 	* @var string
 	*/
-	private $alamat_ktp;
+	protected $alamat_ktp;
 
 	/**
 	*
 	* @var string
 	*/
-	private $alamat_mukim;
+	protected $alamat_mukim;
 
 	/**
 	*
 	* @var string
 	*/
-	private $alamat_sekarang;
+	protected $alamat_sekarang;
 
 	/**
 	*
 	* @var string
 	*/
-	private $rt_ktp;
+	protected $rt_ktp;
 
 	/**
 	*
 	* @var string
 	*/
-	private $rw_ktp;
+	protected $rw_ktp;
 
 	/**
 	*
 	* @var string
 	*/
-	private $jalan_ktp;
+	protected $jalan_ktp;
 
 	/**
 	*
 	* @var string
 	*/
-	private $rt_sekarang;
+	protected $rt_sekarang;
 
 	/**
 	*
 	* @var string
 	*/
-	private $rw_sekarang;
+	protected $rw_sekarang;
 
 	/**
 	*
 	* @var string
 	*/
-	private $jalan_sekarang;
+	protected $jalan_sekarang;
 
 	/**
 	*
 	* @var string
 	*/
-	private $rt_mukim;
+	protected $rt_mukim;
 
 	/**
 	*
 	* @var string
 	*/
-	private $rw_mukim;
+	protected $rw_mukim;
 
 	/**
 	*
 	* @var string
 	*/
-	private $jalan_mukim;
+	protected $jalan_mukim;
 
 	/**
 	*
 	* @var int
 	*/
-	private $status_mukim;
+	protected $status_mukim;
 
 	/**
 	*
 	* @var int
 	*/
-	private $sesuai_ktp;
+	protected $sesuai_ktp;
 
 	/**
 	*
 	* @var int
 	*/
-	private $sesuai_ktp2;
+	protected $sesuai_ktp2;
 
 	/**
 	*
 	* @var string
 	*/
-	private $faskes_mati;
+	protected $faskes_mati;
 
 	/**
 	*
 	* @var string
 	*/
-	private $tanggal_meninggal;
+	protected $tanggal_meninggal;
 
 	/**
 	*
 	* @var string
 	*/
-	private $tempat_meninggal;
+	protected $tempat_meninggal;
 
 	/**
 	*
 	* @var string
 	*/
-	private $nama_tempat;
+	protected $nama_tempat;
 
 	/**
 	*
 	* @var string
 	*/
-	private $nmrkasus_kodeunik;
+	protected $nmrkasus_kodeunik;
 
 	/**
 	*
 	* @var int
 	*/
-	private $sudah;
+	protected $sudah;
 
 	/**
 	*
 	* @var string
 	*/
-	private $masa;
+	protected $masa;
 
 	/**
 	*
 	* @var int
 	*/
-	private $rujukan;
+	protected $rujukan;
 
 	/**
 	*
 	* @var string
 	*/
-	private $baris;
+	protected $baris;
 
 	/**
 	*
 	* @var string
 	*/
-	private $status;
+	protected $status;
 
 	/**
 	*
 	* @var int
 	*/
-	private $rekom;
+	protected $rekom;
 
 	/**
 	*
 	* @var int
 	*/
-	private $orphan;
+	protected $orphan;
 
 	/**
 	*
 	* @var string
 	*/
-	private $cod;
+	protected $cod;
 
 	/**
 	*
 	* @var string
 	*/
-	private $primer;
+	protected $primer;
 
 	/**
 	*
 	* @var string
 	*/
-	private $institusi;
+	protected $institusi;
 
 	/**
 	*
 	* @var string
 	*/
-	private $verified;
+	protected $verified;
 
 	/**
 	*
 	* @var string
 	*/
-	private $final;
+	protected $final;
 
 	/**
 	*
 	* @var string
 	*/
-	private $anulir;
+	protected $anulir;
 
 	/**
 	*
 	* @var int
 	*/
-	private $valid;
+	protected $valid;
 
     /**
      * @return string

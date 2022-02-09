@@ -11,7 +11,7 @@ abstract class UserOperation extends AbstractOperation {
 
 	public function __construct($userApiKey)
 	{
-		if (empty($userApiKey) || is_string($userApiKey))
+		if (empty($userApiKey) || !is_string($userApiKey))
 			throw new InvalidArgumentException('User API Key required for User Operation', 801);
 			
 		$this->userApiKey = $userApiKey;
