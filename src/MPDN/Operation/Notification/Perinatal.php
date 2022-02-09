@@ -38,7 +38,7 @@ class Perinatal extends UserOperation {
      */
     public function list($type, $periode, $target = null)
     {
-        if (in_array($type, [MPDN::TYPE_ALAMAT_MATI, MPDN::TYPE_ALAMAT_DOMISILI, 
+        if (!in_array($type, [MPDN::TYPE_ALAMAT_MATI, MPDN::TYPE_ALAMAT_DOMISILI, 
                             MPDN::TYPE_ALAMAT_KTP, MPDN::TYPE_ALAMAT_LAHIR]
                         ))
         {
