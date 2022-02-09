@@ -34,7 +34,7 @@ class Maternal extends UserOperation {
      */
     public function list($type, $periode, $target = null)
     {
-        if (in_array($type, [MPDN::TYPE_ALAMAT_MATI, MPDN::TYPE_ALAMAT_DOMISILI, 
+        if (!in_array($type, [MPDN::TYPE_ALAMAT_MATI, MPDN::TYPE_ALAMAT_DOMISILI, 
                             MPDN::TYPE_ALAMAT_KTP]))
         {
             throw new InvalidArgumentException('List type not defined', 800);
@@ -108,7 +108,14 @@ class Maternal extends UserOperation {
             $token = $metadata['token'];
         }
 
-        $data['token'] = $token;
+        if ($data instanceof MaternalNotification)
+        {
+            $data->setToken($token);
+        }
+        else
+        {
+            $data['token'] = $token;
+        }
 
         $this->method = 'POST';
         $this->url    = 'mpdn/ibu/lapor';
@@ -140,7 +147,14 @@ class Maternal extends UserOperation {
             $token = $this->getTokenById($id);
         }
 
-        $data['token'] = $token;
+        if ($data instanceof MaternalNotification)
+        {
+            $data->setToken($token);
+        }
+        else
+        {
+            $data['token'] = $token;
+        }
 
         $this->method = 'POST';
         $this->url    = 'mpdn/ibu/edit';

@@ -113,7 +113,14 @@ class Perinatal extends UserOperation {
             $token = $metadata['token'];
         }
 
-        $data['token'] = $token;
+        if ($data instanceof PerinatalNotification)
+        {
+            $data->setToken($token);
+        }
+        else
+        {
+            $data['token'] = $token;
+        }
 
         $this->method = 'POST';
         $this->url    = 'mpdn/bayi/lapor';
@@ -145,7 +152,14 @@ class Perinatal extends UserOperation {
             $token = $this->getTokenById($id);
         }
 
-        $data['token'] = $token;
+        if ($data instanceof PerinatalNotification)
+        {
+            $data->setToken($token);
+        }
+        else
+        {
+            $data['token'] = $token;
+        }
 
         $this->method = 'POST';
         $this->url    = 'mpdn/bayi/edit';
