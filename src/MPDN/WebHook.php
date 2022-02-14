@@ -25,12 +25,12 @@ class WebHook
 	/**
 	 * Header for WebHook Validation
 	 */
-	const HEADER_WEBHOOK_VALIDATION = 'X-MPDN-Validation';
+	const HEADER_WEBHOOK_VALIDATION = 'X-Mpdn-Validation';
 
 	/**
 	 * Header for WebHook Version
 	 */
-	const HEADER_WEBHOOK_VERSION = 'X-MPDN-Version';
+	const HEADER_WEBHOOK_VERSION = 'X-Mpdn-Version';
 
 	/**
 	 * Query param for WebHook Validation

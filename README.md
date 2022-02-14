@@ -93,7 +93,7 @@ MPDN::prepare($globalKey, false)
     ->setHttpClient($myClient);
 ```
 
-## 3. Menggunakan Operation pada MPDN API
+### 3. Menggunakan Operation pada MPDN API
 Berikut adalah fitur (disebut dengan **Operation**) yang didukung oleh library.
 | Class | Function | Operation |
 | ----- | -------- | --------- |
